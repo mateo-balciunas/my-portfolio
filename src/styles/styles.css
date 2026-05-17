@@ -1,0 +1,87 @@
+
+:root {
+    font-family: Inter, system-ui, Avenir, Helvetica, sans-serif;
+    line-height: 1.5 rem;
+    font-weight: 400;
+
+    color-scheme: light dark;
+    color: rgba(255, 255, 255, 0.87);
+    background-color: #010422;
+
+}
+
+body {
+    margin: 0;
+    display: flex;
+    place-items: center;
+    min-width: 320px;
+    min-height: 100vh;
+}
+
+#root {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 2rem;
+    text-align: center;
+}
+
+main {
+    width: 100%;
+    max-width: 960px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Componente header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 10%;
+    background-color: rgba(22, 0, 42, 0.9);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header ul {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.header a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.header a:hover {
+    color: var(--primary-color);
+}
+
+/* Hero */
+.hero {
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 1rem;
+}
+
+.highlight {
+    color: var(--primary-color)
+}
+
+.btn-primary {
+    margin-top: 2rem;
+    padding: 0.8rem 2rem;
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: 8px;
+    text-decoration: none;
+}
+
