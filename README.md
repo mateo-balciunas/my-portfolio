@@ -1,4 +1,4 @@
-#Portfolio Personal de Mateo Balciunas
+# Portfolio Personal de Mateo Balciunas
 
 ¡Bienvenido a mi portfolio personal! Este proyecto es una muestra de mis capacidades como desarrollador web. Construido con React y diseñado para ser moderno, interactivo y responsive. Aqui podrás explorar mis proyectos, conocer mis habilidades y contactarme.
 
