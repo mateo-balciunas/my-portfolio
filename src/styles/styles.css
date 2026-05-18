@@ -11,8 +11,32 @@
     --bg-secondary: #ffffff;  /* Blanco puro para las tarjetas */
 
     color: var(--text-color);
-
     background-color: var(--bg-primary);
+    
+    /* Añadimos un patrón de puntos sutil para dar textura técnica */
+    background-image: radial-gradient(rgba(46, 91, 255, 0.05) 1px, transparent 1px);
+    background-size: 30px 30px;
+}
+
+/* Animación de esferas dinámicas para el fondo */
+.bg-blob {
+    position: fixed;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(46, 91, 255, 0.08) 0%, transparent 70%);
+    border-radius: 50%;
+    z-index: -1;
+    filter: blur(60px);
+    animation: move 20s infinite alternate;
+    pointer-events: none;
+}
+
+.blob-1 { top: -10%; left: -10%; }
+.blob-2 { bottom: -10%; right: -10%; animation-delay: -5s; }
+
+@keyframes move {
+    from { transform: translate(0, 0) scale(1); }
+    to { transform: translate(100px, 50px) scale(1.2); }
 }
 
 body {
@@ -71,6 +95,12 @@ h2 {
     color: var(--text-color);
     font-weight: 500;
     transition: color 0.3s;
+    display: flex; /* Para alinear el icono y el texto */
+    align-items: center; /* Centrar verticalmente */
+}
+
+.nav-icon {
+    margin-right: 0.5rem; /* Espacio entre el icono y el texto */
 }
 
 .header a:hover {
@@ -208,4 +238,68 @@ h2 {
     text-decoration: none;
     border-bottom: 1px solid var(--primary-color);
     transition: opacity 0.3s;
+}
+
+/* Contact */
+.contact {
+    text-align: center;
+}
+
+.contact p {
+    max-width: 600px;
+    margin: 0 auto 2rem auto;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: var(--bg-secondary);
+    padding: 2.5rem;
+    border-radius: 12px;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.6rem;
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group textarea {
+    width: 100%;
+    padding: 0.8rem 1rem ;
+    border: 1px solid rgba(46, 91,255, 0.3);
+    border-radius: 8px;
+    background-color: var(--bg-primary);
+    color: var(--text-color);
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input[type="text"]:focus,
+.form-group input[type="email"]:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--bg-primary);
+    box-shadow: 0 0 0 3px rgba(46, 91, 255, 0.2);
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.contact-form .btn-primary {
+    width: auto;
+    display: inline-block;
+    margin-top: 1rem;
 }

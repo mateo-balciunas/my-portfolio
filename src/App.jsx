@@ -12,6 +12,9 @@ import "./styles/styles.css"
 function App() {
   return(
     <div>
+      {/* ELEMENTOS DINÁMICOS DE FONDO */}
+      <div className="bg-blob blob-1"></div>
+      <div className="bg-blob blob-2"></div>
       {/* COMPONENTES */}
       <Header />
       <main>
