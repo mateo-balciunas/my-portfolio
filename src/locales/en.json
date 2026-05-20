@@ -1,0 +1,40 @@
+{
+  "header": {
+    "about": "About Me",
+    "skills": "Skills",
+    "projects": "Projects",
+    "contact": "Contact"
+  },
+  "hero": {
+    "title": "Hi, I'm <1>Mateo</1>",
+    "subtitle": "Software Developer",
+    "description": "Specialized in creating modern and efficient web solutions.",
+    "button": "View projects"
+  },
+  "about": {
+    "title": "About Me",
+    "p1": "Hi!, I'm a developer recently graduated in <1>Web Application Development (DAW)</1>. My focus is on Frontend and Backend development, I enjoy turning ideas and designs into functional websites to showcase.",
+    "p2": "Throughout my training I have acquired solid foundations in HTML, CSS and JavaScript, which I always try to improve and move forward. I am focusing on the <1>React</1> ecosystem for the frontend and <3>Node</3> for the backend."
+  },
+  "skills": {
+    "title": "Skills",
+    "frontend": "Frontend",
+    "backend": "Backend",
+    "tools_others": "Tools & Others"
+  },
+  "projects": {
+    "title": "Projects",
+    "portfolio": {
+      "title": "Portfolio",
+      "description": "Web developer portfolio."
+    }
+  },
+  "contact": {
+    "title": "Contact",
+    "subtitle": "Interested in collaborating or just saying hi?",
+    "name": "Name",
+    "email": "Email",
+    "message": "Message",
+    "send": "Send"
+  }
+}

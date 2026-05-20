@@ -6,7 +6,7 @@
 
     color-scheme: light;
     --primary-color: #2e5bff; /* Azul eléctrico */
-    --text-color: #2e5bff;    /* Letras en azul eléctrico */
+    --text-color: #333;       /* Gris oscuro para mejor legibilidad */
     --bg-primary: #f5f5f0;    /* Color hueso */
     --bg-secondary: #ffffff;  /* Blanco puro para las tarjetas */
 
@@ -21,12 +21,12 @@
 /* Animación de esferas dinámicas para el fondo */
 .bg-blob {
     position: fixed;
-    width: 500px;
-    height: 500px;
-    background: radial-gradient(circle, rgba(46, 91, 255, 0.08) 0%, transparent 70%);
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(46, 91, 255, 0.15) 0%, transparent 70%);
     border-radius: 50%;
-    z-index: -1;
-    filter: blur(60px);
+    z-index: -1; /* Asegúrate de que los contenedores no tengan bg sólido */
+    filter: blur(80px);
     animation: move 20s infinite alternate;
     pointer-events: none;
 }
@@ -41,16 +41,12 @@
 
 body {
     margin: 0;
-    display: flex;
-    place-items: center;
     min-width: 320px;
-    min-height: 100vh;
 }
 
 #root {
-    max-width: 1280px;
+    width: 100%;
     margin: 0 auto;
-    padding: 2rem;
     text-align: center;
 }
 
@@ -58,27 +54,33 @@ main {
     width: 100%;
     max-width: 960px;
     padding: 20px;
+    margin: 0 auto; /* Centra el contenido principal */
     box-sizing: border-box;
 }
 
 section {
+    width: 100%;
     padding: 4rem 0;
     scroll-margin-top: 80px;
+    background-color: transparent; /* Importante para ver las esferas */
 }
 
 h2 {
     font-size: 2.5rem;
-    margin-bottom: 2rem;
+    margin-bottom: 2rem; /* Volvemos al margen original */
     color: var(--primary-color);
     position: relative;
 }
 /* Componente header */
 .header {
+    width: 100%; /* Aseguramos que el header ocupe todo el ancho */
+    box-sizing: border-box;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1.5rem 10%;
-    background-color: rgba(245, 245, 240, 0.8); /* Fondo hueso con transparencia */
+    padding: 1.5rem 10%; /* Mantener el padding del header */
+    background-color: rgba(245, 245, 240, 0.9); /* Glassmorphism */
+    backdrop-filter: blur(10px); /* Efecto de desenfoque muy moderno */
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -88,6 +90,8 @@ h2 {
     display: flex;
     list-style: none;
     gap: 2rem;
+    margin: 0; /* Eliminar margen por defecto de la lista */
+    padding: 0; /* Eliminar padding por defecto de la lista */
 }
 
 .header a {
@@ -105,6 +109,27 @@ h2 {
 
 .header a:hover {
     color: var(--primary-color);
+}
+
+.lang-switcher {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.lang-switcher button {
+    background: none;
+    border: 1px solid var(--primary-color);
+    color: var(--text-color);
+    padding: 0.2rem 0.5rem;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    transition: all 0.3s ease;
+}
+
+.lang-switcher button.active {
+    background-color: var(--primary-color);
+    color: white;
 }
 
 /* Hero */
@@ -138,6 +163,7 @@ h2 {
     margin: 0 auto;
     line-height: 1.8;
     font-size: 1.1rem;
+    min-height: 320px; /* Estabiliza el tamaño para que no salte entre idiomas */
 }
 
 .about-content p{
@@ -154,6 +180,7 @@ h2 {
 
 .skill-category {
     background-color: var(--bg-secondary);
+    min-height: 180px; /* Mantiene las tarjetas de habilidades alineadas */
     padding: 1.5rem;
     border-radius: 12px;
     text-align: left;
@@ -190,6 +217,8 @@ h2 {
 .projects-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    width: 100%; /* Aseguramos que la cuadrícula ocupe el ancho disponible */
+    max-width: 850px; /* Limitamos el ancho para que la tarjeta sea "alargada" hacia los lados */
     gap: 2rem;
     margin-top: 2rem;
 }
@@ -202,6 +231,7 @@ h2 {
     box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
     text-align: left;
+    min-height: 250px; /* Estabiliza las tarjetas de proyectos */
 }
 
 .project-card:hover {
@@ -290,7 +320,7 @@ h2 {
 .form-group input[type="email"]:focus,
 .form-group textarea:focus {
     outline: none;
-    border-color: var(--bg-primary);
+    border-color: var(--primary-color);
     box-shadow: 0 0 0 3px rgba(46, 91, 255, 0.2);
 }
 

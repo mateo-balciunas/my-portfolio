@@ -6,6 +6,8 @@ import Skills from "./components/Skills.jsx";
 import Projects from "./components/Projects.jsx";
 import Contact from "./components/Contact.jsx";
 
+import "./i18n";
+
 import "./styles/styles.css" 
 
 
