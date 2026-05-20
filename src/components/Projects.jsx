@@ -11,6 +11,13 @@ function Projects() {
             description: t("projects.portfolio.description"),
             tags: ["React", "JavaScript", "CSS", "HTML"],
             github: "https://github.com/mateo-balciunas/my-portfolio.git",
+        },
+        {
+            key: "inkManager",
+            title: "inkManager",
+            description: t("projects.inkManager.description"),
+            tags: ["TypeScript", "Node", "Express", "Prisma"],
+            github: "https://github.com/mateo-balciunas/InkManager-backend.git"
         }
     ]
     return (

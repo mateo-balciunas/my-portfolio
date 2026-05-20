@@ -27,6 +27,9 @@
     "portfolio": {
       "title": "Portfolio",
       "description": "Portfolio de desarrollador web."
+    },
+    "inkManager": {
+      "description": "Gestor de clientes para estudios de tatuajes, permite mostrar un portfolio del artista, multi-inquilino para empresas, gestionar citas (CRUD)."
     }
   },
   "contact": {
@@ -36,5 +39,8 @@
     "email": "Email",
     "message": "Mensaje",
     "send": "Enviar"
+  },
+  "footer": {
+    "rights": "Todos los derechos reservados."
   }
 }

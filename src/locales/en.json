@@ -27,6 +27,9 @@
     "portfolio": {
       "title": "Portfolio",
       "description": "Web developer portfolio."
+    },
+    "inkManager": {
+      "description": "Client manager for tattoo studios, allows to display a portfolio of the artist, multi-tenancy for companies, manage appointments (CRUD)"
     }
   },
   "contact": {
@@ -36,5 +39,8 @@
     "email": "Email",
     "message": "Message",
     "send": "Send"
+  },
+  "footer": {
+    "rights": "All rights reserved."
   }
 }
