@@ -7,7 +7,8 @@ function Contact() {
         <section id="contact" className="contact">
             <h2>{t('contact.title')}</h2>
             <p>{t('contact.subtitle')}</p>
-            <form className="contact-form" method="POST">
+            <form className="contact-form" method="POST" name="contact" data-netlify="true">
+                <input type="hidden" name="form-name" value="contact" />
                 <div className="form-group">
                     <label htmlFor="name">{t('contact.name')}</label>
                     <input type="text" id="name" name="name" required />
